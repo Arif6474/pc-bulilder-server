@@ -29,7 +29,7 @@ async function run() {
     const productsCollection = db.collection("products");
     console.log("DB connect successfully! ");
 
-    // API
+    // get all products
     app.get("/products", async (req, res) => {
       const cursor = productsCollection.find({});
       const books = await cursor.toArray();
